@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => false]);
 
 // Landing routes
-Route::view('/', 'landing.home')->name('home');
+Route::view('/', 'landing.home')->name('home')->middleware('guest');
 Route::view('/faq', 'landing.faq')->name('faq');
 Route::view('/privacy-policy', 'landing.privacy-policy')->name('privacy-policy');
 Route::view('/term-condition', 'landing.term-condition')->name('term-condition');
